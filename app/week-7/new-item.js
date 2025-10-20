@@ -51,8 +51,8 @@ export default function NewItem({ onAddItem }) {
 
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center p-8 rounded-6xl bg-amber-100">    
-        <form onSubmit={handleSubmit} className="min-h-screen flex flex-col items-center justify-center p-8 rounded-6xl">
+        <div className="mx-auto flex flex-col items-center justify-center p-1 rounded-6xl bg-amber-100">    
+        <form onSubmit={handleSubmit} className="mx-auto flex flex-col items-center justify-center pb-6 rounded-6xl">
 
 
             <h1 className="bg-amber-100 text-4xl font-bold mb-4 p-4 rounded-1xl">
@@ -139,7 +139,7 @@ export default function NewItem({ onAddItem }) {
         <div className="pt-2">
             <button
             type="submit"
-            className="w-full sm:w-auto rounded-xl bg-amber-400 hover:bg-amber-500 active:bg-amber-600 text-white font-bold px-6 py-3 transition"
+            className="w-full mx-auto rounded-xl  bg-amber-400 hover:bg-amber-500 active:bg-amber-600 text-white font-bold px-6 py-3 transition"
             >
             Submit
             </button>
