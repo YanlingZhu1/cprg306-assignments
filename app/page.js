@@ -38,6 +38,18 @@ export default function Home() {
       >
         <p>Go to Week-6 page</p>
       </Link>
+      <Link
+        href="/week-7"
+        className="bg-green-100  text-green-600 hover:underline text-lg font-bold"
+      >
+        <p>Go to Week-7 page</p>
+      </Link>
+      <Link
+        href="/week-8"
+        className="bg-green-100  text-green-600 hover:underline text-lg font-bold"
+      >
+        <p>Go to Week-8 page</p>
+      </Link>
     </main>
   );
 }

@@ -1,25 +1,29 @@
 "use client";
 
 import Item from "./item.js";
-import itemsData from "./items.json";
 import { useState } from "react";
 
 // ItemList component that displays a list of shopping items
-export default function ItemList() {
+export default function ItemList({ items }) {
     const[sortBy, setSortBy] = useState("name");
 
 
         // 2) Copy + sort (trim whitespace, unify case; for category sort, use name as secondary sort)
-    let itemsCopy = [...itemsData];
+    let itemsCopy = [...items];
     itemsCopy.sort((a, b) => {
-        const aName = a.name.trim().toLowerCase();
-        const bName = b.name.trim().toLowerCase();
+        const aName = a.name;
+        const bName = b.name;
 
         if (sortBy === "name") {
         return aName.localeCompare(bName);
         }
-        const aCat = a.category.trim().toLowerCase();
-        const bCat = b.category.trim().toLowerCase();
+
+        if (sortBy === "quantity") {
+        return a.quantity - b.quantity;
+    }
+    // Default to category sort
+        const aCat = a.category;
+        const bCat = b.category;
         const byCat = aCat.localeCompare(bCat);
         return byCat !== 0 ? byCat : aName.localeCompare(bName);
     }); 
