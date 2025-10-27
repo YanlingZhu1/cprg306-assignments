@@ -33,7 +33,7 @@ export default function NewItem({ onAddItem }) {
 
             const id = Math.random().toString(36).substring(2, 9); // generate a random id
             const item = { id: id, name: name, category: category, quantity: quantity };
-            // Handle form submission logic here
+        // Handle form submission logic here
         //     console.log("Submitting item:", item);
         //     alert(
         // `Item submitted:\n- Name: ${name}\n- Quantity: ${quantity}\n- Category: ${category}`
