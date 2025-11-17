@@ -38,7 +38,7 @@ return (
           </h1>
           <button
             onClick={handleLogin}
-            className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+            className="px-6 py-3 bg-blue-400 font-bold text-white rounded hover:bg-blue-700 transition"
           >
             Sign in with GitHub
           </button>
@@ -54,13 +54,13 @@ return (
           <div className="flex flex-col items-center">
             <button
               onClick={handleLogout}
-              className="mb-4 px-6 py-3 bg-red-600 text-white rounded hover:bg-red-700 transition"
+              className="mb-4 px-6 py-3 bg-yellow-500 font-bold text-white rounded hover:bg-yellow-700 transition"
             >
               Sign Out
             </button>
             <Link
               href="/week-9/shopping-list"
-              className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition"
+              className="px-6 py-3 bg-green-500 font-bold text-white rounded hover:bg-green-700 transition"
             >
               Go to Shopping List
             </Link>
