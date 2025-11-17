@@ -1,11 +1,13 @@
     "use client";
 
-    import { use, useState } from "react";
+    import { useState, useEffect } from "react";
     import ItemList from "./item-list.js";
     import NewItem from "./new-item.js";
     import MealIdeas from "./meal-ideas.js";
     import itemsData from "./items.json";
     import { useUserAuth } from "../_utils/auth-context.js";
+    import { useRouter } from "next/navigation";
+
 
     // 清洗函数：去 emoji → 取逗号前主名词 → 去首尾空白 → 小写
     function cleanIngredientName(raw) {
@@ -26,16 +28,16 @@
     const router = useRouter();
     useEffect(() => {
         if (!user) {
-        router.push("/week-9/login");
+        router.push("/week-9");
         }
     }, [user, router]);
-    
-    if (user===undefined) {
-        return <p className="mx-auto max-w-5xl p-4 bg-gray-300">Redirecting to login...</p>;
-    }   
-    if (user===null) {
-        return <p className="mx-auto max-w-5xl p-4 bg-gray-300">Loading...</p>;
-    }     
+   if (!user) {
+    return (
+      <p className="mx-auto max-w-5xl p-4 bg-gray-300">
+        Redirecting to login...
+      </p>
+    );  
+   }
 
     const handleAddItem = (newItem) => {
         setItems((prev) => [...prev, newItem]);

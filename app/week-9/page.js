@@ -26,35 +26,47 @@ await firebaseSignOut();
     alert("Error during sign-out:", error);
   }
 };
+const displayName = user?.displayName || user?.email || "User";
 
+return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
+      {/* 未登录状态 */}
+      {!user && (
+        <>
+          <h1 className="text-4xl font-bold mb-6">
+            Week 9 – Shopping List 登录
+          </h1>
+          <button
+            onClick={handleLogin}
+            className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+          >
+            Sign in with GitHub
+          </button>
+        </>
+      )}
 
-return (    
-
-<div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
-    <h1 className="text-4xl font-bold mb-6">Welcome, {user.displayName} ({user.email})</h1>
-    {!user ? (
-      <button
-        onClick={handleLogin}
-        className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-      >
-        Sign in with GitHub
-      </button>
-    ) : (
-      <div className="flex flex-col items-center">
-        <button
-          onClick={handleLogout}
-          className="mb-4 px-6 py-3 bg-red-600 text-white rounded hover:bg-red-700 transition"
-        >
-          Sign Out
-        </button>
-        <Link
-          href="/week-9/shopping-list"
-          className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition"
-        >
-          Go to Shopping List
-        </Link>
-      </div>
-    )}
-  </div>
-);   
+      {/* 已登录状态 */}
+      {user && (
+        <>
+          <h1 className="text-4xl font-bold mb-6">
+            Welcome, {displayName}
+          </h1>
+          <div className="flex flex-col items-center">
+            <button
+              onClick={handleLogout}
+              className="mb-4 px-6 py-3 bg-red-600 text-white rounded hover:bg-red-700 transition"
+            >
+              Sign Out
+            </button>
+            <Link
+              href="/week-9/shopping-list"
+              className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition"
+            >
+              Go to Shopping List
+            </Link>
+          </div>
+        </>
+      )}
+    </div>
+  );
 }   
