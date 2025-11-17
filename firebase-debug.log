@@ -1,0 +1,265 @@
+[debug] [2025-11-17T19:40:43.941Z] ----------------------------------------------------------------------
+[debug] [2025-11-17T19:40:43.943Z] Command:       /opt/homebrew/Cellar/node/23.1.0/bin/node /opt/homebrew/bin/firebase init
+[debug] [2025-11-17T19:40:43.943Z] CLI Version:   14.25.0
+[debug] [2025-11-17T19:40:43.943Z] Platform:      darwin
+[debug] [2025-11-17T19:40:43.943Z] Node Version:  v23.1.0
+[debug] [2025-11-17T19:40:43.944Z] Time:          Mon Nov 17 2025 12:40:43 GMT-0700 (北美山区标准时间)
+[debug] [2025-11-17T19:40:43.944Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/carletts/cprg306/cprg306-assignments
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2025-11-17T19:41:04.576Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-17T19:41:04.576Z] > authorizing via signed-in user (iomedivh200@gmail.com)
+[debug] [2025-11-17T19:41:04.578Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:04.578Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:04.579Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-11-17T19:41:05.077Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-17T19:41:05.077Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] 
+=== Dataconnect Setup
+[debug] [2025-11-17T19:41:07.445Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:07.445Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:07.445Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/cprg306-assignment-f87a0/billingInfo [none]
+[debug] [2025-11-17T19:41:07.802Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/cprg306-assignment-f87a0/billingInfo 200
+[debug] [2025-11-17T19:41:07.803Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/cprg306-assignment-f87a0/billingInfo {"name":"projects/cprg306-assignment-f87a0/billingInfo","projectId":"cprg306-assignment-f87a0","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API firebasedataconnect.googleapis.com is enabled... 
+[debug] [2025-11-17T19:41:07.804Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:07.804Z] Checked if tokens are valid: true, expires at: 1763412034241
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2025-11-17T19:41:07.805Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:07.805Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:07.805Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-11-17T19:41:07.805Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/cprg306-assignment-f87a0
+[debug] [2025-11-17T19:41:07.807Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/sqladmin.googleapis.com [none]
+[debug] [2025-11-17T19:41:07.807Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/sqladmin.googleapis.com x-goog-quota-user=projects/cprg306-assignment-f87a0
+[debug] [2025-11-17T19:41:08.350Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-11-17T19:41:08.351Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firebasedataconnect.googleapis.com [omitted]
+[warn] ⚠  dataconnect: missing required API firebasedataconnect.googleapis.com. Enabling now... 
+[debug] [2025-11-17T19:41:08.352Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:08.352Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:08.352Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firebasedataconnect.googleapis.com:enable [none]
+[debug] [2025-11-17T19:41:08.353Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firebasedataconnect.googleapis.com:enable x-goog-quota-user=projects/cprg306-assignment-f87a0
+[debug] [2025-11-17T19:41:08.548Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/sqladmin.googleapis.com 200
+[debug] [2025-11-17T19:41:08.548Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/sqladmin.googleapis.com [omitted]
+[warn] ⚠  dataconnect: missing required API sqladmin.googleapis.com. Enabling now... 
+[debug] [2025-11-17T19:41:08.549Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:08.549Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:08.549Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/sqladmin.googleapis.com:enable [none]
+[debug] [2025-11-17T19:41:08.549Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/sqladmin.googleapis.com:enable x-goog-quota-user=projects/cprg306-assignment-f87a0
+[debug] [2025-11-17T19:41:08.644Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firebasedataconnect.googleapis.com:enable 200
+[debug] [2025-11-17T19:41:08.644Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firebasedataconnect.googleapis.com:enable [omitted]
+[debug] [2025-11-17T19:41:08.812Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/sqladmin.googleapis.com:enable 200
+[debug] [2025-11-17T19:41:08.813Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/sqladmin.googleapis.com:enable [omitted]
+[debug] [2025-11-17T19:41:18.825Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:18.825Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:18.825Z] >>> [apiv2][query] GET https://firebasedataconnect.googleapis.com/v1/projects/cprg306-assignment-f87a0/locations/-/services [none]
+[debug] [2025-11-17T19:41:19.643Z] <<< [apiv2][status] GET https://firebasedataconnect.googleapis.com/v1/projects/cprg306-assignment-f87a0/locations/-/services 200
+[debug] [2025-11-17T19:41:19.644Z] <<< [apiv2][body] GET https://firebasedataconnect.googleapis.com/v1/projects/cprg306-assignment-f87a0/locations/-/services {}
+[info] ✔  dataconnect: Detected existing apps . (web) 
+[debug] [2025-11-17T19:41:19.672Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:19.672Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:19.672Z] >>> [apiv2][query] GET https://firebasedataconnect.googleapis.com/v1/projects/cprg306-assignment-f87a0/locations/us-east4/services/cprg306-assignments/schemas/main [none]
+[debug] [2025-11-17T19:41:20.155Z] <<< [apiv2][status] GET https://firebasedataconnect.googleapis.com/v1/projects/cprg306-assignment-f87a0/locations/us-east4/services/cprg306-assignments/schemas/main 404
+[debug] [2025-11-17T19:41:20.156Z] <<< [apiv2][body] GET https://firebasedataconnect.googleapis.com/v1/projects/cprg306-assignment-f87a0/locations/us-east4/services/cprg306-assignments/schemas/main {"error":{"code":404,"message":"Resource 'projects/cprg306-assignment-f87a0/locations/us-east4/services/cprg306-assignments/schemas/main' was not found","status":"NOT_FOUND","details":[{"@type":"type.googleapis.com/google.rpc.ResourceInfo","resourceName":"projects/cprg306-assignment-f87a0/locations/us-east4/services/cprg306-assignments/schemas/main"}]}}
+[info] ✔  Wrote dataconnect/dataconnect.yaml 
+[info] ✔  Wrote dataconnect/seed_data.gql 
+[info] ✔  Wrote dataconnect/schema/schema.gql 
+[info] ✔  Wrote dataconnect/example/connector.yaml 
+[info] ✔  Wrote dataconnect/example/queries.gql 
+[info] ✔  Wrote dataconnect/example/mutations.gql 
+[info] ✔  Wrote dataconnect/example/connector.yaml 
+[info] i  dataconnect: Installing the generated SDKs ... 
+[info] i  dataconnect: downloading dataconnect-emulator-2.17.1... {"metadata":{"emulator":{"name":"dataconnect"},"message":"downloading dataconnect-emulator-2.17.1..."}}
+[debug] [2025-11-17T19:41:20.186Z] >>> [apiv2][query] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-macos-arm64-v2.17.1 
+[debug] [2025-11-17T19:41:20.525Z] <<< [apiv2][status] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-macos-arm64-v2.17.1 200
+[debug] [2025-11-17T19:41:20.525Z] <<< [apiv2][body] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-macos-arm64-v2.17.1 [stream]
+[debug] [2025-11-17T19:41:21.347Z] defaultcredentials: writing to file /Users/carletts/.config/firebase/iomedivh200_gmail_com_application_default_credentials.json
+[info] ✔  dataconnect: Installed generated SDKs for . (web) 
+[info] i  Visit https://firebase.google.com/docs/data-connect/web-sdk#react for more information on how to set up React Generated SDKs for Firebase Data Connect 
+[info] 
+=== Firestore Setup
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[debug] [2025-11-17T19:41:23.652Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:23.652Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:23.653Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firestore.googleapis.com [none]
+[debug] [2025-11-17T19:41:23.653Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firestore.googleapis.com x-goog-quota-user=projects/cprg306-assignment-f87a0
+[debug] [2025-11-17T19:41:24.178Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firestore.googleapis.com 200
+[debug] [2025-11-17T19:41:24.178Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firestore.googleapis.com [omitted]
+[warn] ⚠  firestore: missing required API firestore.googleapis.com. Enabling now... 
+[debug] [2025-11-17T19:41:24.178Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:24.178Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:24.178Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firestore.googleapis.com:enable [none]
+[debug] [2025-11-17T19:41:24.178Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firestore.googleapis.com:enable x-goog-quota-user=projects/cprg306-assignment-f87a0
+[debug] [2025-11-17T19:41:24.690Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firestore.googleapis.com:enable 200
+[debug] [2025-11-17T19:41:24.690Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/firestore.googleapis.com:enable [omitted]
+[debug] [2025-11-17T19:41:34.710Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:34.710Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:34.711Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/cprg306-assignment-f87a0/databases [none]
+[debug] [2025-11-17T19:41:35.231Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/cprg306-assignment-f87a0/databases 200
+[debug] [2025-11-17T19:41:35.232Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/cprg306-assignment-f87a0/databases {}
+[debug] [2025-11-17T19:41:35.233Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:35.233Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:35.233Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/cprg306-assignment-f87a0/locations [none]
+[debug] [2025-11-17T19:41:35.341Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/cprg306-assignment-f87a0/locations 200
+[debug] [2025-11-17T19:41:35.341Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/cprg306-assignment-f87a0/locations {"locations":[{"name":"projects/cprg306-assignment-f87a0/locations/eur3","labels":{"appengine.googleapis.com/geo":"europe-west","cloud.googleapis.com/location":"eur3","cloud.googleapis.com/geo":"eur3"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"eur3","displayName":"Europe"},{"name":"projects/cprg306-assignment-f87a0/locations/nam5","labels":{"appengine.googleapis.com/geo":"us-central","cloud.googleapis.com/location":"nam5","cloud.googleapis.com/geo":"nam5"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"nam5","displayName":"United States"},{"name":"projects/cprg306-assignment-f87a0/locations/nam7","labels":{"cloud.googleapis.com/location":"nam7","cloud.googleapis.com/geo":"nam7"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"nam7","displayName":"United States"},{"name":"projects/cprg306-assignment-f87a0/locations/africa-south1","labels":{"cloud.googleapis.com/location":"africa-south1","cloud.googleapis.com/region":"africa-south1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"africa-south1","displayName":"Johannesburg"},{"name":"projects/cprg306-assignment-f87a0/locations/asia-east1","labels":{"appengine.googleapis.com/region":"asia-east1","cloud.googleapis.com/location":"asia-east1","cloud.googleapis.com/region":"asia-east1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"asia-east1","displayName":"Taiwan"},{"name":"projects/cprg306-assignment-f87a0/locations/asia-east2","labels":{"appengine.googleapis.com/region":"asia-east2","cloud.googleapis.com/location":"asia-east2","cloud.googleapis.com/region":"asia-east2"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"asia-east2","displayName":"Hong Kong"},{"name":"projects/cprg306-assignment-f87a0/locations/asia-northeast1","labels":{"appengine.googleapis.com/region":"asia-northeast1","cloud.googleapis.com/location":"asia-northeast1","cloud.googleapis.com/region":"asia-northeast1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"asia-northeast1","displayName":"Tokyo"},{"name":"projects/cprg306-assignment-f87a0/locations/asia-northeast2","labels":{"appengine.googleapis.com/region":"asia-northeast2","cloud.googleapis.com/location":"asia-northeast2","cloud.googleapis.com/region":"asia-northeast2"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"asia-northeast2","displayName":"Osaka"},{"name":"projects/cprg306-assignment-f87a0/locations/asia-northeast3","labels":{"appengine.googleapis.com/region":"asia-northeast3","cloud.googleapis.com/location":"asia-northeast3","cloud.googleapis.com/region":"asia-northeast3"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"asia-northeast3","displayName":"Seoul"},{"name":"projects/cprg306-assignment-f87a0/locations/asia-south1","labels":{"appengine.googleapis.com/region":"asia-south1","cloud.googleapis.com/location":"asia-south1","cloud.googleapis.com/region":"asia-south1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"asia-south1","displayName":"Mumbai"},{"name":"projects/cprg306-assignment-f87a0/locations/asia-south2","labels":{"cloud.googleapis.com/location":"asia-south2","cloud.googleapis.com/region":"asia-south2"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"asia-south2","displayName":"Delhi"},{"name":"projects/cprg306-assignment-f87a0/locations/asia-southeast1","labels":{"appengine.googleapis.com/region":"asia-southeast1","cloud.googleapis.com/location":"asia-southeast1","cloud.googleapis.com/region":"asia-southeast1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"asia-southeast1","displayName":"Singapore"},{"name":"projects/cprg306-assignment-f87a0/locations/asia-southeast2","labels":{"appengine.googleapis.com/region":"asia-southeast2","cloud.googleapis.com/location":"asia-southeast2","cloud.googleapis.com/region":"asia-southeast2"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"asia-southeast2","displayName":"Jakarta"},{"name":"projects/cprg306-assignment-f87a0/locations/australia-southeast1","labels":{"appengine.googleapis.com/region":"australia-southeast1","cloud.googleapis.com/location":"australia-southeast1","cloud.googleapis.com/region":"australia-southeast1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"australia-southeast1","displayName":"Sydney"},{"name":"projects/cprg306-assignment-f87a0/locations/australia-southeast2","labels":{"cloud.googleapis.com/location":"australia-southeast2","cloud.googleapis.com/region":"australia-southeast2"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"australia-southeast2","displayName":"Melbourne"},{"name":"projects/cprg306-assignment-f87a0/locations/europe-central2","labels":{"appengine.googleapis.com/region":"europe-central2","cloud.googleapis.com/location":"europe-central2","cloud.googleapis.com/region":"europe-central2"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"europe-central2","displayName":"Warsaw"},{"name":"projects/cprg306-assignment-f87a0/locations/europe-north1","labels":{"cloud.googleapis.com/location":"europe-north1","cloud.googleapis.com/region":"europe-north1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"europe-north1","displayName":"Finland"},{"name":"projects/cprg306-assignment-f87a0/locations/europe-north2","labels":{"cloud.googleapis.com/location":"europe-north2","cloud.googleapis.com/region":"europe-north2"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"europe-north2","displayName":"Stockholm"},{"name":"projects/cprg306-assignment-f87a0/locations/europe-southwest1","labels":{"cloud.googleapis.com/location":"europe-southwest1","cloud.googleapis.com/region":"europe-southwest1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"europe-southwest1","displayName":"Madrid"},{"name":"projects/cprg306-assignment-f87a0/locations/europe-west1","labels":{"cloud.googleapis.com/location":"europe-west1","cloud.googleapis.com/region":"europe-west1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"europe-west1","displayName":"Belgium"},{"name":"projects/cprg306-assignment-f87a0/locations/europe-west10","labels":{"cloud.googleapis.com/location":"europe-west10","cloud.googleapis.com/region":"europe-west10"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"europe-west10","displayName":"Berlin"},{"name":"projects/cprg306-assignment-f87a0/locations/europe-west12","labels":{"cloud.googleapis.com/location":"europe-west12","cloud.googleapis.com/region":"europe-west12"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"europe-west12","displayName":"Turin"},{"name":"projects/cprg306-assignment-f87a0/locations/europe-west2","labels":{"appengine.googleapis.com/region":"europe-west2","cloud.googleapis.com/location":"europe-west2","cloud.googleapis.com/region":"europe-west2"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"europe-west2","displayName":"London"},{"name":"projects/cprg306-assignment-f87a0/locations/europe-west3","labels":{"appengine.googleapis.com/region":"europe-west3","cloud.googleapis.com/location":"europe-west3","cloud.googleapis.com/region":"europe-west3"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"europe-west3","displayName":"Frankfurt"},{"name":"projects/cprg306-assignment-f87a0/locations/europe-west4","labels":{"cloud.googleapis.com/location":"europe-west4","cloud.googleapis.com/region":"europe-west4"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"europe-west4","displayName":"Netherlands"},{"name":"projects/cprg306-assignment-f87a0/locations/europe-west6","labels":{"appengine.googleapis.com/region":"europe-west6","cloud.googleapis.com/location":"europe-west6","cloud.googleapis.com/region":"europe-west6"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"europe-west6","displayName":"Zurich"},{"name":"projects/cprg306-assignment-f87a0/locations/europe-west8","labels":{"cloud.googleapis.com/location":"europe-west8","cloud.googleapis.com/region":"europe-west8"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"europe-west8","displayName":"Milan"},{"name":"projects/cprg306-assignment-f87a0/locations/europe-west9","labels":{"cloud.googleapis.com/location":"europe-west9","cloud.googleapis.com/region":"europe-west9"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"europe-west9","displayName":"Paris"},{"name":"projects/cprg306-assignment-f87a0/locations/me-central1","labels":{"cloud.googleapis.com/location":"me-central1","cloud.googleapis.com/region":"me-central1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"me-central1","displayName":"Doha"},{"name":"projects/cprg306-assignment-f87a0/locations/me-central2","labels":{"cloud.googleapis.com/location":"me-central2","cloud.googleapis.com/region":"me-central2"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"me-central2","displayName":"Dammam"},{"name":"projects/cprg306-assignment-f87a0/locations/me-west1","labels":{"cloud.googleapis.com/location":"me-west1","cloud.googleapis.com/region":"me-west1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"me-west1","displayName":"Tel Aviv"},{"name":"projects/cprg306-assignment-f87a0/locations/northamerica-northeast1","labels":{"appengine.googleapis.com/region":"northamerica-northeast1","cloud.googleapis.com/location":"northamerica-northeast1","cloud.googleapis.com/region":"northamerica-northeast1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"northamerica-northeast1","displayName":"Montréal"},{"name":"projects/cprg306-assignment-f87a0/locations/northamerica-northeast2","labels":{"cloud.googleapis.com/location":"northamerica-northeast2","cloud.googleapis.com/region":"northamerica-northeast2"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"northamerica-northeast2","displayName":"Toronto"},{"name":"projects/cprg306-assignment-f87a0/locations/northamerica-south1","labels":{"cloud.googleapis.com/location":"northamerica-south1","cloud.googleapis.com/region":"northamerica-south1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"northamerica-south1","displayName":"Mexico"},{"name":"projects/cprg306-assignment-f87a0/locations/southamerica-east1","labels":{"appengine.googleapis.com/region":"southamerica-east1","cloud.googleapis.com/location":"southamerica-east1","cloud.googleapis.com/region":"southamerica-east1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"southamerica-east1","displayName":"São Paulo"},{"name":"projects/cprg306-assignment-f87a0/locations/southamerica-west1","labels":{"cloud.googleapis.com/location":"southamerica-west1","cloud.googleapis.com/region":"southamerica-west1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"southamerica-west1","displayName":"Santiago"},{"name":"projects/cprg306-assignment-f87a0/locations/us-central1","labels":{"cloud.googleapis.com/location":"us-central1","cloud.googleapis.com/region":"us-central1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"us-central1","displayName":"Iowa"},{"name":"projects/cprg306-assignment-f87a0/locations/us-east1","labels":{"appengine.googleapis.com/region":"us-east1","cloud.googleapis.com/location":"us-east1","cloud.googleapis.com/region":"us-east1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"us-east1","displayName":"South Carolina"},{"name":"projects/cprg306-assignment-f87a0/locations/us-east4","labels":{"appengine.googleapis.com/region":"us-east4","cloud.googleapis.com/location":"us-east4","cloud.googleapis.com/region":"us-east4"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"us-east4","displayName":"Northern Virginia"},{"name":"projects/cprg306-assignment-f87a0/locations/us-east5","labels":{"cloud.googleapis.com/location":"us-east5","cloud.googleapis.com/region":"us-east5"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"us-east5","displayName":"Columbus"},{"name":"projects/cprg306-assignment-f87a0/locations/us-south1","labels":{"cloud.googleapis.com/location":"us-south1","cloud.googleapis.com/region":"us-south1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"us-south1","displayName":"Dallas"},{"name":"projects/cprg306-assignment-f87a0/locations/us-west1","labels":{"appengine.googleapis.com/region":"us-west1","cloud.googleapis.com/location":"us-west1","cloud.googleapis.com/region":"us-west1"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"us-west1","displayName":"Oregon"},{"name":"projects/cprg306-assignment-f87a0/locations/us-west2","labels":{"appengine.googleapis.com/region":"us-west2","cloud.googleapis.com/location":"us-west2","cloud.googleapis.com/region":"us-west2"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"us-west2","displayName":"Los Angeles"},{"name":"projects/cprg306-assignment-f87a0/locations/us-west3","labels":{"appengine.googleapis.com/region":"us-west3","cloud.googleapis.com/location":"us-west3","cloud.googleapis.com/region":"us-west3"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"us-west3","displayName":"Salt Lake City"},{"name":"projects/cprg306-assignment-f87a0/locations/us-west4","labels":{"appengine.googleapis.com/region":"us-west4","cloud.googleapis.com/location":"us-west4","cloud.googleapis.com/region":"us-west4"},"metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.LocationMetadata"},"locationId":"us-west4","displayName":"Las Vegas"}]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2025-11-17T19:41:41.355Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:41.355Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:41.356Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/cprg306-assignment-f87a0/releases pageSize=10&pageToken=
+[debug] [2025-11-17T19:41:41.822Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/cprg306-assignment-f87a0/releases 200
+[debug] [2025-11-17T19:41:41.822Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/cprg306-assignment-f87a0/releases {}
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2025-11-17T19:41:44.014Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:44.015Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:44.015Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:44.015Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:44.015Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/cprg306-assignment-f87a0/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2025-11-17T19:41:44.017Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/cprg306-assignment-f87a0/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2025-11-17T19:41:44.198Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/cprg306-assignment-f87a0/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 404
+[debug] [2025-11-17T19:41:44.198Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/cprg306-assignment-f87a0/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"error":{"code":404,"message":"Project 'cprg306-assignment-f87a0' or database '(default)' does not exist.","status":"NOT_FOUND"}}
+[info] ✔  Wrote y 
+[info] ✔  Wrote y 
+[info] 
+=== Genkit Setup
+[debug] [2025-11-17T19:41:44.224Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/cprg306-assignment-f87a0/databases/(default)/collectionGroups/-/indexes 404
+[debug] [2025-11-17T19:41:44.224Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/cprg306-assignment-f87a0/databases/(default)/collectionGroups/-/indexes {"error":{"code":404,"message":"Project 'cprg306-assignment-f87a0' or database '(default)' does not exist.","status":"NOT_FOUND"}}
+[debug] [2025-11-17T19:41:44.463Z] Error: spawn(npm, view, genkit, version)
+  Stderr:
+{"type":"Buffer","data":[40,110,111,100,101,58,52,52,54,53,51,41,32,69,120,112,101,114,105,109,101,110,116,97,108,87,97,114,110,105,110,103,58,32,67,111,109,109,111,110,74,83,32,109,111,100,117,108,101,32,47,111,112,116,47,104,111,109,101,98,114,101,119,47,108,105,98,47,110,111,100,101,95,109,111,100,117,108,101,115,47,110,112,109,47,110,111,100,101,95,109,111,100,117,108,101,115,47,100,101,98,117,103,47,115,114,99,47,110,111,100,101,46,106,115,32,105,115,32,108,111,97,100,105,110,103,32,69,83,32,77,111,100,117,108,101,32,47,111,112,116,47,104,111,109,101,98,114,101,119,47,108,105,98,47,110,111,100,101,95,109,111,100,117,108,101,115,47,110,112,109,47,110,111,100,101,95,109,111,100,117,108,101,115,47,115,117,112,112,111,114,116,115,45,99,111,108,111,114,47,105,110,100,101,120,46,106,115,32,117,115,105,110,103,32,114,101,113,117,105,114,101,40,41,46,10,83,117,112,112,111,114,116,32,102,111,114,32,108,111,97,100,105,110,103,32,69,83,32,77,111,100,117,108,101,32,105,110,32,114,101,113,117,105,114,101,40,41,32,105,115,32,97,110,32,101,120,112,101,114,105,109,101,110,116,97,108,32,102,101,97,116,117,114,101,32,97,110,100,32,109,105,103,104,116,32,99,104,97,110,103,101,32,97,116,32,97,110,121,32,116,105,109,101,10,40,85,115,101,32,96,110,111,100,101,32,45,45,116,114,97,99,101,45,119,97,114,110,105,110,103,115,32,46,46,46,96,32,116,111,32,115,104,111,119,32,119,104,101,114,101,32,116,104,101,32,119,97,114,110,105,110,103,32,119,97,115,32,99,114,101,97,116,101,100,41,10]}
+
+[debug] [2025-11-17T19:41:44.906Z] Error: spawn(npm, view, genkit-cli, version)
+  Stderr:
+{"type":"Buffer","data":[40,110,111,100,101,58,52,52,54,54,48,41,32,69,120,112,101,114,105,109,101,110,116,97,108,87,97,114,110,105,110,103,58,32,67,111,109,109,111,110,74,83,32,109,111,100,117,108,101,32,47,111,112,116,47,104,111,109,101,98,114,101,119,47,108,105,98,47,110,111,100,101,95,109,111,100,117,108,101,115,47,110,112,109,47,110,111,100,101,95,109,111,100,117,108,101,115,47,100,101,98,117,103,47,115,114,99,47,110,111,100,101,46,106,115,32,105,115,32,108,111,97,100,105,110,103,32,69,83,32,77,111,100,117,108,101,32,47,111,112,116,47,104,111,109,101,98,114,101,119,47,108,105,98,47,110,111,100,101,95,109,111,100,117,108,101,115,47,110,112,109,47,110,111,100,101,95,109,111,100,117,108,101,115,47,115,117,112,112,111,114,116,115,45,99,111,108,111,114,47,105,110,100,101,120,46,106,115,32,117,115,105,110,103,32,114,101,113,117,105,114,101,40,41,46,10,83,117,112,112,111,114,116,32,102,111,114,32,108,111,97,100,105,110,103,32,69,83,32,77,111,100,117,108,101,32,105,110,32,114,101,113,117,105,114,101,40,41,32,105,115,32,97,110,32,101,120,112,101,114,105,109,101,110,116,97,108,32,102,101,97,116,117,114,101,32,97,110,100,32,109,105,103,104,116,32,99,104,97,110,103,101,32,97,116,32,97,110,121,32,116,105,109,101,10,40,85,115,101,32,96,110,111,100,101,32,45,45,116,114,97,99,101,45,119,97,114,110,105,110,103,115,32,46,46,46,96,32,116,111,32,115,104,111,119,32,119,104,101,114,101,32,116,104,101,32,119,97,114,110,105,110,103,32,119,97,115,32,99,114,101,97,116,101,100,41,10]}
+
+[debug] [2025-11-17T19:41:45.287Z] Error: spawn(npm, view, @genkit-ai/google-genai, version)
+  Stderr:
+{"type":"Buffer","data":[40,110,111,100,101,58,52,52,54,54,57,41,32,69,120,112,101,114,105,109,101,110,116,97,108,87,97,114,110,105,110,103,58,32,67,111,109,109,111,110,74,83,32,109,111,100,117,108,101,32,47,111,112,116,47,104,111,109,101,98,114,101,119,47,108,105,98,47,110,111,100,101,95,109,111,100,117,108,101,115,47,110,112,109,47,110,111,100,101,95,109,111,100,117,108,101,115,47,100,101,98,117,103,47,115,114,99,47,110,111,100,101,46,106,115,32,105,115,32,108,111,97,100,105,110,103,32,69,83,32,77,111,100,117,108,101,32,47,111,112,116,47,104,111,109,101,98,114,101,119,47,108,105,98,47,110,111,100,101,95,109,111,100,117,108,101,115,47,110,112,109,47,110,111,100,101,95,109,111,100,117,108,101,115,47,115,117,112,112,111,114,116,115,45,99,111,108,111,114,47,105,110,100,101,120,46,106,115,32,117,115,105,110,103,32,114,101,113,117,105,114,101,40,41,46,10,83,117,112,112,111,114,116,32,102,111,114,32,108,111,97,100,105,110,103,32,69,83,32,77,111,100,117,108,101,32,105,110,32,114,101,113,117,105,114,101,40,41,32,105,115,32,97,110,32,101,120,112,101,114,105,109,101,110,116,97,108,32,102,101,97,116,117,114,101,32,97,110,100,32,109,105,103,104,116,32,99,104,97,110,103,101,32,97,116,32,97,110,121,32,116,105,109,101,10,40,85,115,101,32,96,110,111,100,101,32,45,45,116,114,97,99,101,45,119,97,114,110,105,110,103,115,32,46,46,46,96,32,116,111,32,115,104,111,119,32,119,104,101,114,101,32,116,104,101,32,119,97,114,110,105,110,103,32,119,97,115,32,99,114,101,97,116,101,100,41,10]}
+
+[debug] [2025-11-17T19:41:46.323Z] Error: spawn(npm, view, @genkit-ai/vertexai, version)
+  Stderr:
+{"type":"Buffer","data":[40,110,111,100,101,58,52,52,54,56,48,41,32,69,120,112,101,114,105,109,101,110,116,97,108,87,97,114,110,105,110,103,58,32,67,111,109,109,111,110,74,83,32,109,111,100,117,108,101,32,47,111,112,116,47,104,111,109,101,98,114,101,119,47,108,105,98,47,110,111,100,101,95,109,111,100,117,108,101,115,47,110,112,109,47,110,111,100,101,95,109,111,100,117,108,101,115,47,100,101,98,117,103,47,115,114,99,47,110,111,100,101,46,106,115,32,105,115,32,108,111,97,100,105,110,103,32,69,83,32,77,111,100,117,108,101,32,47,111,112,116,47,104,111,109,101,98,114,101,119,47,108,105,98,47,110,111,100,101,95,109,111,100,117,108,101,115,47,110,112,109,47,110,111,100,101,95,109,111,100,117,108,101,115,47,115,117,112,112,111,114,116,115,45,99,111,108,111,114,47,105,110,100,101,120,46,106,115,32,117,115,105,110,103,32,114,101,113,117,105,114,101,40,41,46,10,83,117,112,112,111,114,116,32,102,111,114,32,108,111,97,100,105,110,103,32,69,83,32,77,111,100,117,108,101,32,105,110,32,114,101,113,117,105,114,101,40,41,32,105,115,32,97,110,32,101,120,112,101,114,105,109,101,110,116,97,108,32,102,101,97,116,117,114,101,32,97,110,100,32,109,105,103,104,116,32,99,104,97,110,103,101,32,97,116,32,97,110,121,32,116,105,109,101,10,40,85,115,101,32,96,110,111,100,101,32,45,45,116,114,97,99,101,45,119,97,114,110,105,110,103,115,32,46,46,46,96,32,116,111,32,115,104,111,119,32,119,104,101,114,101,32,116,104,101,32,119,97,114,110,105,110,103,32,119,97,115,32,99,114,101,97,116,101,100,41,10]}
+
+[debug] [2025-11-17T19:41:46.825Z] Error: spawn(npm, view, @genkit-ai/googleai, version)
+  Stderr:
+{"type":"Buffer","data":[40,110,111,100,101,58,52,52,54,56,57,41,32,69,120,112,101,114,105,109,101,110,116,97,108,87,97,114,110,105,110,103,58,32,67,111,109,109,111,110,74,83,32,109,111,100,117,108,101,32,47,111,112,116,47,104,111,109,101,98,114,101,119,47,108,105,98,47,110,111,100,101,95,109,111,100,117,108,101,115,47,110,112,109,47,110,111,100,101,95,109,111,100,117,108,101,115,47,100,101,98,117,103,47,115,114,99,47,110,111,100,101,46,106,115,32,105,115,32,108,111,97,100,105,110,103,32,69,83,32,77,111,100,117,108,101,32,47,111,112,116,47,104,111,109,101,98,114,101,119,47,108,105,98,47,110,111,100,101,95,109,111,100,117,108,101,115,47,110,112,109,47,110,111,100,101,95,109,111,100,117,108,101,115,47,115,117,112,112,111,114,116,115,45,99,111,108,111,114,47,105,110,100,101,120,46,106,115,32,117,115,105,110,103,32,114,101,113,117,105,114,101,40,41,46,10,83,117,112,112,111,114,116,32,102,111,114,32,108,111,97,100,105,110,103,32,69,83,32,77,111,100,117,108,101,32,105,110,32,114,101,113,117,105,114,101,40,41,32,105,115,32,97,110,32,101,120,112,101,114,105,109,101,110,116,97,108,32,102,101,97,116,117,114,101,32,97,110,100,32,109,105,103,104,116,32,99,104,97,110,103,101,32,97,116,32,97,110,121,32,116,105,109,101,10,40,85,115,101,32,96,110,111,100,101,32,45,45,116,114,97,99,101,45,119,97,114,110,105,110,103,115,32,46,46,46,96,32,116,111,32,115,104,111,119,32,119,104,101,114,101,32,116,104,101,32,119,97,114,110,105,110,103,32,119,97,115,32,99,114,101,97,116,101,100,41,10]}
+
+[debug] [2025-11-17T19:41:49.504Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-17T19:41:49.504Z] > authorizing via signed-in user (iomedivh200@gmail.com)
+[debug] [2025-11-17T19:41:49.504Z] [iam] checking project cprg306-assignment-f87a0 for permissions ["firebase.projects.get"]
+[debug] [2025-11-17T19:41:49.504Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:49.504Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:49.504Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cprg306-assignment-f87a0:testIamPermissions [none]
+[debug] [2025-11-17T19:41:49.504Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cprg306-assignment-f87a0:testIamPermissions x-goog-quota-user=projects/cprg306-assignment-f87a0
+[debug] [2025-11-17T19:41:49.504Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cprg306-assignment-f87a0:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-11-17T19:41:49.736Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cprg306-assignment-f87a0:testIamPermissions 200
+[debug] [2025-11-17T19:41:49.736Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cprg306-assignment-f87a0:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-11-17T19:41:49.737Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:49.738Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:49.738Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:49.738Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:49.738Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-11-17T19:41:49.738Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/cprg306-assignment-f87a0
+[debug] [2025-11-17T19:41:49.740Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-11-17T19:41:49.740Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/cprg306-assignment-f87a0
+[debug] [2025-11-17T19:41:50.244Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/runtimeconfig.googleapis.com 200
+[debug] [2025-11-17T19:41:50.245Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-11-17T19:41:50.253Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/cloudfunctions.googleapis.com 200
+[debug] [2025-11-17T19:41:50.253Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-11-17T19:41:50.253Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:50.253Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:41:50.253Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2025-11-17T19:41:50.254Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/cprg306-assignment-f87a0
+[debug] [2025-11-17T19:41:50.798Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2025-11-17T19:41:50.798Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/cprg306-assignment-f87a0/services/cloudfunctions.googleapis.com:enable [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.js 
+[info] ✔  Wrote functions/tsconfig.dev.json 
+[info] ✔  Wrote functions/tsconfig.json 
+[info] ✔  Wrote functions/src/index.ts 
+[info] ✔  Wrote functions/.gitignore 
+[info] 
+[info] i  genkit: Installing Genkit CLI version 1.23.0
+ 
+[info] i  genkit: Installing NPM packages for genkit 
+[info] ✔  genkit: Successfully installed NPM packages 
+[info] i  genkit: Updating tsconfig.json 
+[info] ✔  genkit: Successfully updated tsconfig.json 
+[info] i  genkit: Updating package.json 
+[info] ✔  genkit: Successfully updated package.json 
+[info] Telemetry data can be used to monitor and gain insights into your AI features. There may be a cost associated with using this feature. See https://firebase.google.com/docs/genkit/observability/telemetry-collection.
+[info] i  genkit: Generating sample file 
+[info] ✔  genkit: Successfully generated sample file (src/genkit-sample.ts) 
+[info] 
+[info] 
+Login to Google Cloud using:
+[info]     gcloud auth application-default login --project cprg306-assignment-f87a0
+
+[info] Then start the Genkit developer experience by running:
+[info]     cd functions && npm run genkit:start
+[info] 
+=== Functions Setup
+[debug] [2025-11-17T19:43:35.184Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-17T19:43:35.184Z] > authorizing via signed-in user (iomedivh200@gmail.com)
+[debug] [2025-11-17T19:43:35.184Z] [iam] checking project cprg306-assignment-f87a0 for permissions ["firebase.projects.get"]
+[debug] [2025-11-17T19:43:35.184Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:43:35.184Z] Checked if tokens are valid: true, expires at: 1763412034241
+[debug] [2025-11-17T19:43:35.184Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cprg306-assignment-f87a0:testIamPermissions [none]
+[debug] [2025-11-17T19:43:35.184Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cprg306-assignment-f87a0:testIamPermissions x-goog-quota-user=projects/cprg306-assignment-f87a0
+[debug] [2025-11-17T19:43:35.184Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cprg306-assignment-f87a0:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-11-17T19:43:35.347Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cprg306-assignment-f87a0:testIamPermissions 200
+[debug] [2025-11-17T19:43:35.348Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cprg306-assignment-f87a0:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+Detected existing codebase(s): default
+
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[debug] [2025-11-17T19:43:46.050Z] Error: ENOTDIR: not a directory, scandir '/Users/carletts/cprg306/cprg306-assignments/y'
+    at Object.readdirSync (node:fs:1505:26)
+    at Object.createFileSync (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/fs-extra/lib/ensure/file.js:55:10)
+    at Config.writeProjectFile (/opt/homebrew/lib/node_modules/firebase-tools/lib/config.js:171:12)
+    at Config.askWriteProjectFile (/opt/homebrew/lib/node_modules/firebase-tools/lib/config.js:219:14)
+    at async Object.setup (/opt/homebrew/lib/node_modules/firebase-tools/lib/init/features/functions/javascript.js:21:9)
+    at async init (/opt/homebrew/lib/node_modules/firebase-tools/lib/init/index.js:77:13)
+    at async Command.initAction [as actionFn] (/opt/homebrew/lib/node_modules/firebase-tools/lib/commands/init.js:217:5)
+[error] 
+[error] Error: An unexpected error has occurred.

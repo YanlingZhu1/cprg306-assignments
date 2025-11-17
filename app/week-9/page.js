@@ -1,10 +1,9 @@
 "use client";
 import Link from "next/link";
 // Part 5: landing page starts
-import { use } from "react"
 // Import the useUserAuth hook
 import { useUserAuth } from "./_utils/auth-context";
-
+export default function Week9Page() {
 // Use the useUserAuth hook to get the user object and the login and logout functions
 const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
 
@@ -57,4 +56,5 @@ return (
       </div>
     )}
   </div>
-);      
+);   
+}   
