@@ -1,0 +1,60 @@
+"use client";
+import Link from "next/link";
+// Part 5: landing page starts
+import { use } from "react"
+// Import the useUserAuth hook
+import { useUserAuth } from "./_utils/auth-context";
+
+// Use the useUserAuth hook to get the user object and the login and logout functions
+const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
+
+const  handleLogin = async () => {
+  try {
+    // Sign in to Firebase with GitHub authentication
+await gitHubSignIn();
+  } catch (error) {
+    console.log("Error during sign-in:", error);
+    alert("Error during sign-in:", error);
+  }
+};
+
+const handleLogout = async () => {
+  try {
+    // Sign out of Firebase
+await firebaseSignOut();
+  } catch (error) {
+    console.log("Error during sign-out:", error);
+    alert("Error during sign-out:", error);
+  }
+};
+
+
+return (    
+
+<div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
+    <h1 className="text-4xl font-bold mb-6">Welcome, {user.displayName} ({user.email})</h1>
+    {!user ? (
+      <button
+        onClick={handleLogin}
+        className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+      >
+        Sign in with GitHub
+      </button>
+    ) : (
+      <div className="flex flex-col items-center">
+        <button
+          onClick={handleLogout}
+          className="mb-4 px-6 py-3 bg-red-600 text-white rounded hover:bg-red-700 transition"
+        >
+          Sign Out
+        </button>
+        <Link
+          href="/week-9/shopping-list"
+          className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition"
+        >
+          Go to Shopping List
+        </Link>
+      </div>
+    )}
+  </div>
+);      
