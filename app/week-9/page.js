@@ -30,11 +30,11 @@ const displayName = user?.displayName || user?.email || "User";
 
 return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
-      {/* 未登录状态 */}
+      {/* logged out state */}
       {!user && (
         <>
           <h1 className="text-4xl font-bold mb-6">
-            Week 9 – Shopping List 登录
+            Week 9 – Shopping List Login
           </h1>
           <button
             onClick={handleLogin}
@@ -45,7 +45,7 @@ return (
         </>
       )}
 
-      {/* 已登录状态 */}
+      {/* logged in state */}
       {user && (
         <>
           <h1 className="text-4xl font-bold mb-6">

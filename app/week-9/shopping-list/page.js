@@ -9,7 +9,7 @@
     import { useRouter } from "next/navigation";
 
 
-    // 清洗函数：去 emoji → 取逗号前主名词 → 去首尾空白 → 小写
+    // Helper function to clean ingredient names for meal ideas API queries 
     function cleanIngredientName(raw) {
     if (!raw) return "";
     const noEmoji = raw.replace(
