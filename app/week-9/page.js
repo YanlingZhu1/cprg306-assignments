@@ -13,7 +13,7 @@ const  handleLogin = async () => {
 await gitHubSignIn();
   } catch (error) {
     console.log("Error during sign-in:", error);
-    alert("Error during sign-in:", error);
+    alert("Error during sign-in:", + (error?.message || ""));
   }
 };
 
