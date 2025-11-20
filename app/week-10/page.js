@@ -34,7 +34,7 @@ return (
       {!user && (
         <>
           <h1 className="text-4xl font-bold mb-6">
-            Week 10 – Shopping List Login
+            Week 10 - Shopping List Login
           </h1>
           <button
             onClick={handleLogin}
