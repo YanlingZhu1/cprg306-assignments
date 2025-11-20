@@ -53,11 +53,11 @@ return (
           <h1 className="text-4xl font-bold mb-6">
             Welcome, {displayName}
           </h1>
-          <div>
+          <div className="mb-4 flex flex-col items-center">
           <p>Your email is {user.email}. Here is your image:</p>
-          <img src={user.photoURL} alt={user.displayName}/>
+          <img style={{ borderRadius: "50%", width: "100px", height: "100px"}} src={user.photoURL} alt={user.displayName} />
           </div>
-          
+
           <div className="flex flex-col items-center">
             <button
               onClick={handleLogout}
