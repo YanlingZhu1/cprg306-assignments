@@ -59,7 +59,7 @@ return (
               Sign Out
             </button>
             <Link
-              href="/week-9/shopping-list"
+              href="/week-10/shopping-list"
               className="px-6 py-3 bg-green-500 font-bold text-white rounded hover:bg-green-700 transition"
             >
               Go to Shopping List
