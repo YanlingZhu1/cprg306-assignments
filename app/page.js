@@ -11,6 +11,7 @@ const weekLinks = [
   { href: "/week-7", label: "Go to Week-7 page" },
   { href: "/week-8", label: "Go to Week-8 page" },
   { href: "/week-9", label: "Go to Week-9 page" },
+  { href: "/week-10", label: "Go to Week-10 page" },
 ];
 
 export default function Page() {
