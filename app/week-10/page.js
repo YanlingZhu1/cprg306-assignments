@@ -3,9 +3,10 @@ import Link from "next/link";
 // Part 5: landing page starts
 // Import the useUserAuth hook
 import { useUserAuth } from "./_utils/auth-context";
-export default function Week10Page() {
+export default function Page() {
 // Use the useUserAuth hook to get the user object and the login and logout functions
 const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
+
 
 const  handleLogin = async () => {
   try {
@@ -36,6 +37,7 @@ return (
           <h1 className="text-4xl font-bold mb-6">
             Week 10 - Shopping List Login
           </h1>
+
           <button
             onClick={handleLogin}
             className="px-6 py-3 bg-blue-400 font-bold text-white rounded hover:bg-blue-700 transition"
@@ -51,6 +53,11 @@ return (
           <h1 className="text-4xl font-bold mb-6">
             Welcome, {displayName}
           </h1>
+          <div>
+          <p>Your email is {user.email}. Here is your image:</p>
+          <img src={user.photoURL} alt={user.displayName}/>
+          </div>
+          
           <div className="flex flex-col items-center">
             <button
               onClick={handleLogout}
