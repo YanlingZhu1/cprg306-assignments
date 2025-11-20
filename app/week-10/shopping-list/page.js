@@ -8,7 +8,7 @@ import { useUserAuth } from "../_utils/auth-context.js";
 import { useRouter } from "next/navigation";
 import { getItems, addItem } from "../_services/shopping-list-services.js";
 
-// 清洗食材名字，给 MealIdeas 用
+// Helper function to clean ingredient names for meal ideas API queries
 function cleanIngredientName(raw) {
   if (!raw) return "";
   const noEmoji = raw.replace(
@@ -20,24 +20,24 @@ function cleanIngredientName(raw) {
 }
 
 export default function ShoppingListPage() {
-  // 初始值一定要是 []，不要留空，不然 ItemList 收到 undefined
+  // Initial value must be [], do not leave empty, otherwise ItemList receives undefined
   const [items, setItems] = useState([]);
   const [selectedItemName, setSelectedItemName] = useState("");
 
   const { user } = useUserAuth();
   const router = useRouter();
 
-  // 挂载时：如果没登录就跳回登录页；如果有 user 就加载该用户的 items
+  // On mount: if not logged in, redirect to login page; if user exists, load that user's items
   useEffect(() => {
     if (!user) {
-      // 这里跳回你的登录页路由：如果你的登录页在 /week-10 就改成 "/week-10"
+      // Redirect to your login page route here: if your login page is at /week-10, change to "/week-10"
       router.push("/week-10");
       return;
     }
 
     const loadItems = async () => {
       try {
-        // 一定要把 user.uid 传进去
+        // Make sure to pass user.uid
         const fetchedItems = await getItems(user.uid);
         setItems(fetchedItems);
       } catch (error) {
@@ -48,7 +48,7 @@ export default function ShoppingListPage() {
     loadItems();
   }, [user, router]);
 
-  // 没有 user 时先显示占位文字
+  // Show placeholder text while redirecting if no user
   if (!user) {
     return (
       <p className="mx-auto max-w-5xl p-4 bg-gray-300">
@@ -57,12 +57,12 @@ export default function ShoppingListPage() {
     );
   }
 
-  // 添加条目：先写入 Firestore，再把带 id 的新条目加到本地 state
+  // Add item: first write to Firestore, then add the new item with id to local state
   const handleAddItem = async (newItem) => {
     try {
-      const id = await addItem(user.uid, newItem); // 写库
+      const id = await addItem(user.uid, newItem); // Write to database
       const itemWithId = { id, ...newItem };
-      setItems((prev) => [...prev, itemWithId]);   // 更新本地列表
+      setItems((prev) => [...prev, itemWithId]);   // Update local list
     } catch (error) {
       console.error("Error adding item:", error);
     }
