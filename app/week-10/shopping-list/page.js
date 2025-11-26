@@ -61,7 +61,9 @@ export default function ShoppingListPage() {
   const handleAddItem = async (newItem) => {
     try {
       const id = await addItem(user.uid, newItem); // Write to database
-      const itemWithId = { id, ...newItem };
+      
+      const itemWithId = { ...newItem, id };
+      console.log('itemWithId', itemWithId);
       setItems((prev) => [...prev, itemWithId]);   // Update local list
     } catch (error) {
       console.error("Error adding item:", error);
